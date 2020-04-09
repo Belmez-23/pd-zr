@@ -25,14 +25,14 @@
 }
 h1
 {
-	font-size: 7;
+	font-size: 7em;
 	color: #ffcba7;
 	font-family: Buxton Sketch;
 }
 
 h2 {
-	font-color: #5e216d;
-	font-size:5;
+	color: #5e216d;
+	font-size:5em;
 	font-family: Arial;
 }
       a {
