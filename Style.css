@@ -1,7 +1,7 @@
   #Zagolovok {
     width: 99%; /* Ширина слоя */
     margin: 0px; /* Значение отступов */
-    padding: 5px; /* Поля вокруг текста */
+    padding: 0px; /* Поля вокруг текста */
     border: 0px ; /* Параметры границы */
     background: #ff4873; /* Цвет фона */
    }
@@ -37,7 +37,7 @@ h1
 
 h2 {
 	color: #5e216d;
-	font-size:1em;
+	font-size: 2em;
 	font-family: Arial;
 	margin-block-start: 0.2em;
    	margin-block-end: 0.2em;
