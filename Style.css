@@ -46,6 +46,11 @@ h2 {
           text-decoration: none; /* Отменяем подчеркивание у ссылки */
       }
 
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
       /* Нечетные строки */
       #table tbody tr:nth-child(odd) {
           background: #ff4873;
