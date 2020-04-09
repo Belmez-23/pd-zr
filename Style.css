@@ -14,8 +14,11 @@
 	border-color: #5e216d; /* Параметры границы */
 	background: #ffcba7; /* Цвет фона */
 	border-radius: 10px;	
+	font-size: 12px;
+	color: #eb266a;  /* Цвет текста */
+	font-family: Arial;
 }
-#TextBlok { /* Я забыла где он */
+#TextBlok { /* Я забыла где и зачем он */
 	display:block;
 	width:99%;
 	padding:0.5%;
