@@ -51,6 +51,9 @@ p {
     margin-block-end: 0em;
 }
 
+img {
+  border-radius: 8px;
+}
       /* Нечетные строки */
       #table tbody tr:nth-child(odd) {
           background: #ff4873;
