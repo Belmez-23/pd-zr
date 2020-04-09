@@ -1,4 +1,3 @@
-﻿
   #Zagolovok {
     width: 99%; /* Ширина слоя */
     margin: 0px; /* Значение отступов */
@@ -6,6 +5,7 @@
     border: 0px ; /* Параметры границы */
     background: #ff4873; /* Цвет фона */
    }
+
 #Blok {
 	width: 93%; /* Ширина первого слоя */
 	padding: 10px; /* Поля вокруг текста */
@@ -15,20 +15,26 @@
 	background: #ffcba7; /* Цвет фона */
 	border-radius: 10px;	
 }
-#TextBlok {
-display:block;
-width:99%;
-padding:0.5%;
-margin:0;
-border: 1px solid #ff4873;
-
-overflow:auto;
+#TextBlok { /* Я забыла где он */
+	display:block;
+	width:99%;
+	padding:0.5%;
+	margin:0;
+	border: 1px solid #ff4873;
+	overflow:auto;
 }
-  html, body { 
- /* Цвет стрелок */
-    scrollbar-face-color: pink; /* Цвет полосы прокрутки */
-   }
+h1
+{
+	font-size: 7;
+	color: #ffcba7;
+	font-family: Buxton Sketch;
+}
 
+h2 {
+	font-color: #5e216d;
+	font-size:5;
+	font-family: Arial;
+}
       a {
           text-decoration: none; /* Отменяем подчеркивание у ссылки */
       }
