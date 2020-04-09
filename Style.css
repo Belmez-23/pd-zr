@@ -4,15 +4,15 @@
     margin: 0px; /* Значение отступов */
     padding: 5px; /* Поля вокруг текста */
     border: 0px ; /* Параметры границы */
-    background: #6a718e; /* Цвет фона */
+    background: #ff4873; /* Цвет фона */
    }
 #Blok {
 	width: 93%; /* Ширина первого слоя */
 	padding: 10px; /* Поля вокруг текста */
 	margin: 7px; /* Значение отступов */
 	border: 3px dashed black;
-	border-color: #6a718e; /* Параметры границы */
-	background: #e0cb8a; /* Цвет фона */
+	border-color: #5e216d; /* Параметры границы */
+	background: #ffcba7; /* Цвет фона */
 	border-radius: 10px;	
 }
 #TextBlok {
@@ -20,7 +20,7 @@ display:block;
 width:99%;
 padding:0.5%;
 margin:0;
-border: 1px solid #c2c9e5;
+border: 1px solid #ff4873;
 
 overflow:auto;
 }
@@ -35,10 +35,10 @@ overflow:auto;
 
       /* Нечетные строки */
       #table tbody tr:nth-child(odd) {
-          background: #c2c9e5;
+          background: #ff4873;
       }
 
       /* Четные строки */
       #table tbody tr:nth-child(even) {
-          background: #F7F7F7;
+          background: #f973a4;
       }
