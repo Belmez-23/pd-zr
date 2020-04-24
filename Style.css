@@ -41,6 +41,10 @@ float:left;
 	border: 1px solid #ff4873;
 	overflow:auto;
 }
+button {
+background:#ff4873;
+color: #ffcba7;
+}
 h1
 {
 	font-size: 3em;
