@@ -1,4 +1,22 @@
-  #Zagolovok {
+/*свистнуто из мейнМаша*/
+        @font-face {
+            font-family: Tenoture;
+            src: url(19138.ttf);
+        }
+        header
+        {
+            text-align: center;
+            font-family: Tenoture;/**/
+            font-size: 5em;
+            
+        }
+body
+        {
+            background: #e4acdf;
+            color: #ffffff;
+        }
+/*конец свистнуто из мейнМаша*/
+#Zagolovok {
     width: 99%; /* Ширина слоя */
     margin: 0px; /* Значение отступов */
     padding: 0px; /* Поля вокруг текста */
@@ -11,7 +29,8 @@
 	padding: 10px; /* Поля вокруг текста */
 	margin: 7px; /* Значение отступов */
 	border: 3px dashed black;
-	border-color: #5e216d; /* Параметры границы */
+	border-image: src("fioletovoe-sheroxovatost-stuktura2.jpg");
+	/*border-color: #5e216d;  Параметры границы */
 	background: #ffcba7; /* Цвет фона */
 	border-radius: 10px;	
 	font-size: 16px;
@@ -24,7 +43,8 @@
     padding: 10px; /* Поля вокруг текста */
     margin: 7px; /* Значение отступов */
     border: 3px dashed black;
-	border-color: #5e216d; /* Параметры границы */
+	border-image: src("fioletovoe-sheroxovatost-stuktura2.jpg");
+	/*border-color: #5e216d;  Параметры границы */
 height:300px;
     background: white;/* Цвет фона */
 border-radius: 10px;
