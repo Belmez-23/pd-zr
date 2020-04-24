@@ -18,6 +18,21 @@
 	color: #eb266a;  /* Цвет текста */
 	font-family: Arial;
 }
+
+#MiniBlok {
+    width: 25%; /* Ширина первого слоя */
+    padding: 10px; /* Поля вокруг текста */
+    margin: 7px; /* Значение отступов */
+    border: 3px dashed black;
+	border-color: #5e216d; /* Параметры границы */
+
+    background: white;/* Цвет фона */
+border-radius: 10px;
+float:left; 
+        margin-left:15px; 
+        text-align:center;
+}
+
 #TextBlok { /* Я забыла где и зачем он */
 	display:block;
 	width:99%;
