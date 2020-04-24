@@ -31,6 +31,7 @@ border-radius: 10px;
 float:left; 
         margin-left:15px; 
         text-align:center;
+	overflow: hidden;
 }
 
 #TextBlok { /* Я забыла где и зачем он */
