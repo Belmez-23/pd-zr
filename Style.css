@@ -20,7 +20,7 @@
 }
 
 #MiniBlok {
-    width: 26%; /* Ширина первого слоя */
+    width: 28%; /* Ширина первого слоя */
     padding: 10px; /* Поля вокруг текста */
     margin: 7px; /* Значение отступов */
     border: 3px dashed black;
