@@ -25,7 +25,7 @@
     margin: 7px; /* Значение отступов */
     border: 3px dashed black;
 	border-color: #5e216d; /* Параметры границы */
-
+height:300px;
     background: white;/* Цвет фона */
 border-radius: 10px;
 float:left; 
