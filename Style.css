@@ -13,7 +13,7 @@
 body
         {
             background: #e4acdf;
-            color: #ffffff;
+            color: #fcf7fc;
         }
 /*конец свистнуто из мейнМаша*/
 #Zagolovok {
@@ -29,12 +29,12 @@ body
 	padding: 10px; /* Поля вокруг текста */
 	margin: 7px; /* Значение отступов */
 	border: 3px dashed black;
-	border-image: src("fioletovoe-sheroxovatost-stuktura2.jpg");
-	/*border-color: #5e216d;  Параметры границы */
-	background: #ffcba7; /* Цвет фона */
+	/*border-image: src("fioletovoe-sheroxovatost-stuktura2.jpg");*/
+	border-color: #5e216d;
+	background: #fcf7fc; /* Цвет фона */
 	border-radius: 10px;	
 	font-size: 16px;
-	color: #eb266a;  /* Цвет текста */
+	color: #e4acdf;  /* Цвет текста */
 	font-family: Arial;
 }
 
@@ -43,15 +43,18 @@ body
     padding: 10px; /* Поля вокруг текста */
     margin: 7px; /* Значение отступов */
     border: 3px dashed black;
-	border-image: src("fioletovoe-sheroxovatost-stuktura2.jpg");
-	/*border-color: #5e216d;  Параметры границы */
+	/*border-image: src("fioletovoe-sheroxovatost-stuktura2.jpg");*/
+	border-color: #5e216d;
 height:300px;
-    background: white;/* Цвет фона */
+    background: #fcf7fc; /* Цвет фона */
 border-radius: 10px;
 float:left; 
         margin-left:15px; 
         text-align:center;
 	overflow: hidden;
+	font-size: 16px;
+	color: #e4acdf;  /* Цвет текста */
+	font-family: Arial;
 }
 
 #TextBlok { /* Я забыла где и зачем он */
@@ -64,8 +67,8 @@ float:left;
 }
 
 button {
-	background:#ff4873;
-	color: #ffcba7;
+	background: #e4acdf;
+	color: #fcf7fc;
 	width: 80%;
 	height: 24px;
 	font-size : 20px;
@@ -75,19 +78,19 @@ button {
 	border-radius: 8px;
 }
 
-h1
+/*h1
 {
 	font-size: 3em;
 	color: #ffcba7;
-	font-family: Buxton Sketch;
+	font-family: Tenoture;
 	margin-block-start: 0.5em;
     	margin-block-end: 0.5em;
 }
-
+*/
 h2 {
 	color: #5e216d;
 	font-size: 2em;
-	font-family: Arial;
+	font-family: Tenoture;
 	margin-block-start: 0.2em;
    	margin-block-end: 0.2em;
 }
@@ -105,10 +108,10 @@ img {
 }
       /* Нечетные строки */
       #table tbody tr:nth-child(odd) {
-          background: #ff4873;
+          background: #e4acdf;
       }
 
       /* Четные строки */
       #table tbody tr:nth-child(even) {
-          background: #f973a4;
+          background: #5e216d;
       }
