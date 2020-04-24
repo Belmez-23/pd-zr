@@ -20,7 +20,7 @@
 }
 
 #MiniBlok {
-    width: 25%; /* Ширина первого слоя */
+    width: 30%; /* Ширина первого слоя */
     padding: 10px; /* Поля вокруг текста */
     margin: 7px; /* Значение отступов */
     border: 3px dashed black;
@@ -41,10 +41,16 @@ float:left;
 	border: 1px solid #ff4873;
 	overflow:auto;
 }
+
 button {
-background:#ff4873;
-color: #ffcba7;
+	background:#ff4873;
+	color: #ffcba7;
+	width: 80px;
+	height: 20px;
+	font-size : 20px;
+	font-family: Arial;
 }
+
 h1
 {
 	font-size: 3em;
