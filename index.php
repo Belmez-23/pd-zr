@@ -18,7 +18,6 @@
     <button style="width: 24%">Каталог товаров</button>
     <button style="width: 24%">Оплата и доставка</button>
     <button style="width: 24%">О нас</button>
-    <h2>Последние поступления:</h2>
     <?php
     //подключение к бд, стоит вынести в отд. файл
     $host = 'localhost';  //  имя  хоста
@@ -38,28 +37,34 @@
             echo("Невозможно подключиться к базе данных. Код ошибки: " + mysqli_connect_error()); 
             exit; 
         }
-
         else
         {
-            $state1 = $pdo->query('SELECT `кодТовара` as `tov` FROM `Товар`, `Подраздел` 
-            WHERE  `Товар`.`кодПодраздела` =  `Подраздел`.`кодПодраздела`
-            AND `имяПодраздела` = "Новое поступление"');
-            $i = 3;
-            while($i > 0)
+            $state0 = $pdo->query('SELECT `кодПодраздела` as `key`, `имяПодраздела` as `name` FROM `Подраздел`');
+            while($row0 = $state0->fetch(PDO::FETCH_ASSOC))
             {
-                echo '<div id="MiniBlok" >';
-                $row1 = $state1->fetch(PDO::FETCH_ASSOC);
-                $i--;
-                $state2 = $pdo->query('SELECT `имяТовара` AS `name` FROM `Товар`
-                WHERE `кодТовара` = '.$row1['tov']);
-                $row2 = $state2->fetch(PDO::FETCH_ASSOC);
-                echo $row2['name'].'<br>';
-                $state2 = $pdo->query('SELECT `фотоТовара` AS `photo` FROM `Фото`
-                WHERE `Фото`.`кодТовара` = '.$row1['tov']);
-                $row2 = $state2->fetch(PDO::FETCH_ASSOC);
-                echo '<br><img src='.$row2['photo'].' height="86%">';
-                echo '<button>Купить</button></div>';
+                if($row0['name'] != 'Нет')
+                {
+                    $state1 = $pdo->query('SELECT `кодТовара` as `tov` FROM `Товар`, `Подраздел` 
+                    WHERE  `Товар`.`кодПодраздела` =  '.$row0['key']);
+                    echo '<h2>'.$row0['name'].'</h2>';
+                    $i = 3;
+                    while($i > 0)
+                    {
+                        echo '<div id="MiniBlok" >';
+                        $row1 = $state1->fetch(PDO::FETCH_ASSOC);
+                        $i--;
+                        $state2 = $pdo->query('SELECT `имяТовара` AS `name` FROM `Товар`
+                        WHERE `кодТовара` = '.$row1['tov']);
+                        $row2 = $state2->fetch(PDO::FETCH_ASSOC);
+                        echo $row2['name'].'<br>';
+                        $state2 = $pdo->query('SELECT `фотоТовара` AS `photo` FROM `Фото`
+                        WHERE `Фото`.`кодТовара` = '.$row1['tov']);
+                        $row2 = $state2->fetch(PDO::FETCH_ASSOC);
+                        echo '<br><img src='.$row2['photo'].' height="86%">';
+                        echo '<button>Купить</button></div>';
+                    }
                 }
+            }
         }
     ?>
 </div>
