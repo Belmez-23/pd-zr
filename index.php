@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <link rel="shotcut icon" href="source/handmade.png">
-    <link rel="stylesheet" href="source/Style.css" type="text/css">
-    <title></title>
+     <link rel="stylesheet" href="source/style.css" type="text/css">
+    <title>Золотые ручки</title>
 </head>
 <body link="#ffcba7"  alink="#5e216d" vlink="#ffcba7">
     <header>
 
 
   <p align="center">
-ЗОЛОТЫЕ <img align="center" src="source/handmade.png" width="10%"> РУЧКИ
+ЗОЛОТЫЕ <img align="center" src="source/handmade.png" style='height: 10%; width: 10%;'> РУЧКИ
 </header>
     <button style="width: 24%">Статьи</button>
     <button style="width: 24%">Каталог товаров</button>
@@ -46,7 +46,7 @@
                 {
                     $state1 = $pdo->query('SELECT `кодТовара` as `tov` FROM `Товар`, `Подраздел` 
                     WHERE  `Товар`.`кодПодраздела` =  '.$row0['key']);
-                    echo '<h2>'.$row0['name'].'</h2>';
+                    echo '<div width=100%><h2>'.$row0['name'].'</h2></div>';
                     $i = 3;
                     while($i > 0)
                     {
