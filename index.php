@@ -14,11 +14,7 @@
   <p align="center">
 ЗОЛОТЫЕ <img align="center" src="source/handmade.png" style='height: 10%; width: 10%;'> РУЧКИ
 </header>
-    <button style="width: 24%">Статьи</button>
-    <button style="width: 24%">Каталог товаров</button>
-    <button style="width: 24%">Оплата и доставка</button>
-    <button style="width: 24%">О нас</button>
-    <?php
+<?php
     //подключение к бд, стоит вынести в отд. файл
     $host = 'localhost';  //  имя  хоста
     $db   = 'id13376305_database'; // имя бд
@@ -39,6 +35,25 @@
         }
         else
         {
+            echo '
+<nav role="navigation">
+  <ul>
+    <li><a href="#" aria-haspopup="true">Каталог</a>
+        <ul class="dropdown" aria-label="submenu">';
+        $state = $pdo->query('SELECT `кодКатегории` as `key`, `имяКатегории` as `name` FROM `Категория`');
+        while($row = $state->fetch(PDO::FETCH_ASSOC))
+            {
+                echo '<li><a href="?red_id='.$row['key'].'">';
+                echo '<span id="'.$row['key'].':?id">'.$row['name'].'</span>';
+                echo '</a></li>';
+            }
+      echo '</ul>
+    </li>
+    <li><a href="#">Статьи</a></li>
+    <li><a href="#">Оплата и доставка</a></li>
+    <li><a href="#">О нас</a></li>
+  </ul>
+</nav>';
             $state0 = $pdo->query('SELECT `кодПодраздела` as `key`, `имяПодраздела` as `name` FROM `Подраздел`');
             while($row0 = $state0->fetch(PDO::FETCH_ASSOC))
             {
