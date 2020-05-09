@@ -1,6 +1,4 @@
-/***********************************************
-свистнуто из мейнМаша
-***********************************************/
+/*свистнуто из мейнМаша*/
         @font-face {
             font-family: Tenoture;
             src: url(19138.ttf);
@@ -17,9 +15,7 @@ body
             background: #e4acdf;
             color: #fcf7fc;
         }
-/**********************************************
-конец свистнуто из мейнМаша
-**********************************************/
+/*конец свистнуто из мейнМаша*/
 #Zagolovok {
     width: 99%; /* Ширина слоя */
     margin: 0px; /* Значение отступов */
@@ -139,15 +135,16 @@ ul {
   background: #e4acdf;
     list-style: none;
     margin: 0;
-    padding-left: 0;
+    padding: 0;
 }
 
 li {
     color: #fff;
-  background: #e4acdf;
+    background: #e4acdf;
     display: block;
     float: left;
-    padding: 1rem;
+    padding-left: 0.5%;
+    width:24%;
     position: relative;
     text-decoration: none;
   transition-duration: 0.5s;
@@ -171,11 +168,11 @@ ul li ul {
     background: #e4acdf;
     visibility: hidden;
   opacity: 0;
-  min-width: 5rem;
+  min-width: 400%;
     position: absolute;
   transition: all 0.5s ease;
-  margin-top: 1rem;
-    left: 0;
+  /*margin-top: 1rem;
+    left: 0;*/
   display: none;
 }
 
