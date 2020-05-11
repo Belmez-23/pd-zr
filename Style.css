@@ -112,6 +112,10 @@ img {
 	width: 86%;
 	height: 86%;
 }
+table{
+	font-size: x-large;
+	border: none; 
+}
       /* Нечетные строки */
       #table tbody tr:nth-child(odd) {
           background: #e4acdf;
