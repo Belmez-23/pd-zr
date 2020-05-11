@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="shotcut icon" href="source/handmade.png">
-    <link rel="stylesheet" href="source/style2.css" type="text/css">
+    <link rel="stylesheet" href="source/style3.css" type="text/css">
     <title>Золотые ручки</title>
 </head>
 <body link="#ffcba7"  alink="#5e216d" vlink="#ffcba7">
@@ -70,14 +70,29 @@
                             echo '<div id="MiniBlok" >';
                             $row1 = $state1->fetch(PDO::FETCH_ASSOC);
                             $i--;
-                            $state2 = $pdo->query('SELECT `имяТовара` AS `name` FROM `Товар`
+                            $state2 = $pdo->query('SELECT `имяТовара` AS `name`, `цена` as `p1`, `новаяЦена` as `p2`
+                            FROM `Товар`
+                            WHERE `кодТовара` = '.$row1['tov']);
+                            $state5 = $pdo->query('SELECT `кодВида` AS `key`
+                            FROM `Вид`
                             WHERE `кодТовара` = '.$row1['tov']);
                             $row2 = $state2->fetch(PDO::FETCH_ASSOC);
+                            $row5 = $state5->fetch(PDO::FETCH_ASSOC);
                             echo $row2['name'].'<br>';
+                            $p1 = $row2['p1'];
+                            $p2 = $row2['p2'];
                             $state2 = $pdo->query('SELECT `фотоТовара` AS `photo` FROM `Фото`
-                            WHERE `Фото`.`кодТовара` = '.$row1['tov']);
+                            WHERE `Фото`.`кодВида` = '.$row5['key']);
                             $row2 = $state2->fetch(PDO::FETCH_ASSOC);
                             echo '<br><img src='.$row2['photo'].' height="86%">';
+                            if($p1>$p2)
+                            {
+                                echo '<div><s>'.$p1.' р</s> '.$p2.' р</div>';
+                            }
+                            else
+                            {
+                                echo '<div>'.$p2.' р</div>';
+                            }
                             echo '<button>Купить</button></div>';
                         }
                     }
@@ -91,14 +106,29 @@
                 while($row1 = $state1->fetch(PDO::FETCH_ASSOC))
                 {
                     echo '<div id="MiniBlok" >';
-                    $state2 = $pdo->query('SELECT `имяТовара` AS `name` FROM `Товар`
+                    $state2 = $pdo->query('SELECT `имяТовара` AS `name`, `цена` as `p1`, `новаяЦена` as `p2`
+                    FROM `Товар`
+                    WHERE `кодТовара` = '.$row1['tov']);
+                    $state5 = $pdo->query('SELECT `кодВида` AS `key`
+                    FROM `Вид`
                     WHERE `кодТовара` = '.$row1['tov']);
                     $row2 = $state2->fetch(PDO::FETCH_ASSOC);
+                    $row5 = $state5->fetch(PDO::FETCH_ASSOC);
                     echo $row2['name'].'<br>';
-                    $state2 = $pdo->query('SELECT `фотоТовара` AS `photo` FROM `Фото`
-                    WHERE `Фото`.`кодТовара` = '.$row1['tov']);
+                    $p1 = $row2['p1'];
+                    $p2 = $row2['p2'];
+                    $state2 = $pdo->query("SELECT `фотоТовара` AS `photo` FROM `Фото`
+                    WHERE `Фото`.`кодВида` = ".$row5['key']);
                     $row2 = $state2->fetch(PDO::FETCH_ASSOC);
                     echo '<br><img src='.$row2['photo'].' height="86%">';
+                    if($p1>$p2)
+                    {
+                        echo '<div><s>'.$p1.' р</s> '.$p2.' р</div>';
+                    }
+                    else
+                    {
+                        echo '<div>'.$p2.' р</div>';
+                    }
                     echo '<button>Купить</button></div>';
                 }
             }
@@ -113,14 +143,29 @@
                 while($row1 = $state1->fetch(PDO::FETCH_ASSOC))
                 {
                     echo '<div id="MiniBlok" >';
-                    $state2 = $pdo->query('SELECT `имяТовара` AS `name` FROM `Товар`
+                    $state2 = $pdo->query('SELECT `имяТовара` AS `name`, `цена` as `p1`, `новаяЦена` as `p2`
+                    FROM `Товар`
+                    WHERE `кодТовара` = '.$row1['tov']);
+                    $state5 = $pdo->query('SELECT `кодВида` AS `key`
+                    FROM `Вид`
                     WHERE `кодТовара` = '.$row1['tov']);
                     $row2 = $state2->fetch(PDO::FETCH_ASSOC);
+                    $row5 = $state5->fetch(PDO::FETCH_ASSOC);
                     echo $row2['name'].'<br>';
+                    $p1 = $row2['p1'];
+                    $p2 = $row2['p2'];
                     $state2 = $pdo->query('SELECT `фотоТовара` AS `photo` FROM `Фото`
-                    WHERE `Фото`.`кодТовара` = '.$row1['tov']);
+                    WHERE `Фото`.`кодВида` = '.$row5['key']);
                     $row2 = $state2->fetch(PDO::FETCH_ASSOC);
                     echo '<br><img src='.$row2['photo'].' height="86%">';
+                    if($p1>$p2)
+                    {
+                        echo '<div><s>'.$p1.' р</s> '.$p2.' р</div>';
+                    }
+                    else
+                    {
+                        echo '<div>'.$p2.' р</div>';
+                    }
                     echo '<button>Купить</button></div>';
                 }
             }
@@ -128,5 +173,4 @@
     ?>
     </div>
 </body>
-</html>
 </html>
