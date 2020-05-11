@@ -106,6 +106,8 @@ p {
 
 img {
   border-radius: 8px;
+	width: 96%;
+	height: 96%;
 }
       /* Нечетные строки */
       #table tbody tr:nth-child(odd) {
