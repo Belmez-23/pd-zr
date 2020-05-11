@@ -93,7 +93,7 @@
                             {
                                 echo '<div>'.$p2.' р</div>';
                             }
-                            echo '<button>Купить</button></div>';
+                            echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'`">Купить</button></div>';
                         }
                     }
                 }
@@ -129,7 +129,7 @@
                     {
                         echo '<div>'.$p2.' р</div>';
                     }
-                    echo '<button>Купить</button></div>';
+                    echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'`">Купить</button></div>';
                 }
             }
             else
@@ -166,7 +166,7 @@
                     {
                         echo '<div>'.$p2.' р</div>';
                     }
-                    echo '<button>Купить</button></div>';
+                    echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'`">Купить</button></div>';
                 }
             }
         }
