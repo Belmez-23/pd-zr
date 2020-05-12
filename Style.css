@@ -39,6 +39,7 @@ body
 	color: #7b2d91;  /* Цвет текста НОВЫЙ*/
 	font-family: Arial;
 	line-height: 1.5; /* !!!! разрыв между текстом */
+	padding-bottom: 50px;
 }
 
 #MiniBlok {
@@ -58,6 +59,7 @@ float:left;
 	font-size: 16px;
 	color: #7b2d91;  /* Цвет текста НОВЫЙ*/
 	font-family: Arial;
+	padding-bottom: 50px;
 }
 
 #TextBlok { /* Я забыла где и зачем он */
