@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="shotcut icon" href="source/handmade.png">
-    <link rel="stylesheet" href="source/style3.css" type="text/css">
+    <link rel="stylesheet" href="source/style.css" type="text/css">
     <title>Золотые ручки</title>
 </head>
 <body link="#ffcba7"  alink="#5e216d" vlink="#ffcba7">
@@ -39,21 +39,38 @@
             echo '<nav role="navigation"><ul>
             <li><a href="#" aria-haspopup="true">Каталог</a>
             <ul class="dropdown" aria-label="submenu">';
-            echo '<li><a href="?red_id=0">';
+            if(isset($_GET['user']))
+            {
+                $a = $_GET['user'];
+            }
+            else
+            {
+                $a = 0;
+            }
+            echo '<li><a href="index.php?red_id=0&user='.$a.'">';
             echo '<span id="0:?id">Все товары</span>';
             echo '</a></li>';
             $state = $pdo->query('SELECT `кодКатегории` as `key`, `имяКатегории` as `name` FROM `Категория`');
             while($row = $state->fetch(PDO::FETCH_ASSOC))
             {
-                echo '<li><a href="?red_id='.$row['key'].'">';
+                echo '<li><a href="index.php?red_id='.$row['key'].'&user='.$a.'">';
                 echo '<span id="'.$row['key'].':?id">'.$row['name'].'</span>';
                 echo '</a></li>';
             }
             echo '</ul></li>
                 <li><a href="#">Статьи</a></li>
-                <li><a href="#">Оплата и доставка</a></li>
-                <li><a href="#">О нас</a></li>
-            </ul></nav>';
+                <li><a href="about.php">О нас</a></li>';
+            if ($a == 0)
+            {
+                echo '<li><a href="user.php">Вход</a></li>';
+            }
+            else
+            {
+                $state1 = $pdo->query('SELECT * FROM `Пользователь` WHERE `кодПользователя` = '.$_GET['user']);
+                $row1 = $state1->fetch(PDO::FETCH_ASSOC);
+                echo '<li><a href="user.php">'.$row1['e-mail'].'</a></li>';
+            }
+            echo '</ul></nav>';
             if (!isset($_GET['red_id']))
             {
                 $state0 = $pdo->query('SELECT `кодПодраздела` as `key`, `имяПодраздела` as `name` FROM `Подраздел`');
@@ -93,7 +110,7 @@
                             {
                                 echo '<div>'.$p2.' р</div>';
                             }
-                            echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'`">Купить</button></div>';
+                            echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'&user='.$a.'`">Купить</button></div>';
                         }
                     }
                 }
@@ -129,7 +146,7 @@
                     {
                         echo '<div>'.$p2.' р</div>';
                     }
-                    echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'`">Купить</button></div>';
+                     echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'&user='.$a.'`">Купить</button></div>';
                 }
             }
             else
@@ -166,7 +183,7 @@
                     {
                         echo '<div>'.$p2.' р</div>';
                     }
-                    echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'`">Купить</button></div>';
+                    echo '<button onclick="location.href=`goods.php?red_id='.$row1['tov'].'&user='.$a.'`">Купить</button></div>';
                 }
             }
         }
