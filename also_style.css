@@ -23,7 +23,7 @@ header, nav, footer, article, aside, section
 }
 
 /*прилипающий футер*/
-/*.wrapper
+.wrapper
 {
     min-height: 100%;
     margin-bottom: -100px;
@@ -204,6 +204,15 @@ button:hover, button:focus-within
 {
     background: #ff4873;
     cursor: pointer;
+}
+button:focus-within a
+{
+    outline: none;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
 }
 /****************************************************
 конец
