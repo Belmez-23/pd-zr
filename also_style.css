@@ -1,0 +1,287 @@
+/****************************************************
+адаптивка
+****************************************************/
+header, nav, footer, article, aside, section
+{
+    width: 99%;
+}
+@media (min-width: 600px)
+{
+    header, nav
+    {
+        width: 99%;
+    }
+}
+@media (min-width: 800px)
+{
+    body
+    {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*прилипающий футер*/
+/*.wrapper
+{
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+footer, .push
+{
+    height: 100px;
+    clear: both;
+}
+/****************************************************
+конец
+*****************************************************/
+@font-face /*шрифт без засечек*/
+{
+    font-family: Tenoture;
+    src: url(19138.ttf);
+}
+
+header
+{
+    text-align: center;
+    font-family: Tenoture;
+    font-size: 5em;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+}
+body
+{
+    background: #e4acdf;
+    color: #fcf7fc;
+	font-family: Arial;
+    /*font-size: x-large;*/
+}
+/*#Zagolovok
+{
+    width: 99%; /* Ширина слоя */
+    /*margin: 0px; /* Значение отступов */
+    /*padding: 0px; /* Поля вокруг текста */
+    /*border: 0px ; /* Параметры границы */
+    /*background: #ff4873; /* Цвет фона */
+/*}
+*/
+#Blok {
+	width: 99%; /* Ширина первого слоя */
+	padding: 0.5%;
+	padding-bottom: 5%;
+	margin-top: 7%;
+    background: #fcf7fc; /* Цвет фона */
+	border-radius: 8px;	
+	font-size: 16px;
+	color: #5e216d;
+	/*color: #7b2d91;  /* Цвет текста НОВЫЙ*/
+	font-family: Arial;
+    line-height: 1.5; /* !!!! разрыв между текстом */
+
+}
+
+#MiniBlok {
+    width: 31%; /* Ширина первого слоя */
+    /*padding: 1%; /* Поля вокруг текста */
+    padding-top:1%;
+    padding-bottom:1%;
+    margin: 1%; /* Значение отступов */
+/*    border: 3px dashed black;
+/*	/*border-image: src("fioletovoe-sheroxovatost-stuktura2.jpg");*/
+/*	border-color: #5e216d;*/
+/*    height:300px;*/
+    background: #fcf7fc; /* Цвет фона */
+    border-radius: 8px;
+    float:left; 
+/*    margin-left:15px;*/ 
+    text-align:center;
+	overflow: hidden;
+	font-size: 16px;
+	color: #7b2d91;  /* Цвет текста НОВЫЙ*/
+	font-family: Arial;
+	/*padding-bottom: 50px;*/
+}
+
+/*#TextBlok { /* Я забыла где и зачем он */
+/*	display:block;
+	width:99%;
+	padding:0.5%;
+	margin:0;
+	border: 1px solid #ff4873;
+	overflow:auto;
+}*/
+
+
+h1
+{
+	font-size: 3em;
+	color: #ffcba7;
+	font-family: Tenoture;
+	margin-block-start: 0.5em;
+    	margin-block-end: 0.5em;
+}
+
+h2 {
+	color: #5e216d;
+	font-size: 2em;
+	font-family: Tenoture;
+	margin-block-start: 0.2em;
+   	margin-block-end: 0.2em;
+	padding-left: 10px;
+}
+
+h3 {
+	color: #5e216d;
+	font-size: 1.8em;
+	font-family: Tenoture;
+	margin-block-start: 0em;
+   	margin-block-end: 0em;
+}
+a
+{
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+
+/*p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+*/
+img {
+  border-radius: 8px;
+  margin-right:10px;
+}
+
+table{
+    color: #f7daf7;
+	border: none; 
+	width:67%;
+}
+      /* Нечетные строки */
+#table tbody tr:nth-child(odd)
+{
+    background: #7b2d91;
+}
+
+      /* Четные строки */
+#table tbody tr:nth-child(even)
+{
+    background: #5e216d;
+}
+/****************************************************
+Кнопки
+****************************************************/
+button {
+	background: #7b2d91;
+	color: #fcf7fc;
+	width: 90%;
+	height: 24px;
+	font-size : 20px;
+	font-family: Arial;
+	border: none;
+	/*display: inline-block;*/
+	border-radius: 8px;
+    transition-duration: 0.5s;
+}
+
+#butt2 {
+	background: #7b2d91;
+	color: #fcf7fc;
+	width: 90%;
+	height: 24px;
+	font-size : 20px;
+	font-family: Arial;
+	border: none;
+	/*display: inline-block;*/
+	border-radius: 8px;
+    transition-duration: 0.5s;
+    position: relative;
+left: 50%;
+transform: translate(-50%, 0);
+}
+button:hover, button:focus-within
+{
+    background: #ff4873;
+    cursor: pointer;
+}
+/****************************************************
+конец
+****************************************************/
+/****************************************************
+выпадающее меню
+*****************************************************/
+a
+{
+    text-decoration: none;
+}
+
+ul
+{
+    background: #e4acdf;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li
+{
+    color: #fff;
+    background: #e4acdf;
+    display: block;
+    float: left;
+    width:25%;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    text-align: center;
+    font-family: Arial;
+}
+  
+li a
+{
+    color: #fff;
+}
+
+li:hover, li:focus-within
+{
+    background: #ff4873;
+    cursor: pointer;
+}
+
+li:focus-within a
+{
+    outline: none;
+}
+
+ul li ul
+{
+    background: #b876b8;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 400%;
+    position: absolute;
+    transition: all 0.5s ease;
+    /*margin-top: 0.5rem;/**/
+    left: 0;
+    /*display: none;*/
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus
+{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li
+{
+    clear: both;
+    width: 100%;
+}
+/****************************************************
+конец
+****************************************************/
