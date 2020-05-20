@@ -186,7 +186,7 @@ button {
 }
 
 #butt2 {
-	background: #7b2d91;
+	background: #5e286b;
 	color: #fcf7fc;
 	width: 90%;
 	height: 24px;
@@ -204,6 +204,15 @@ button:hover, button:focus-within
 {
     background: #ff4873;
     cursor: pointer;
+}
+#butt2:hover, #butt2:focus-within
+{
+    background: #ff4873;
+    cursor: pointer;
+}
+#butt2:focus-within a
+{
+    outline: none;
 }
 button:focus-within a
 {
